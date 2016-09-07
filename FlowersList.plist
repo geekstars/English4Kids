@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Poinsettia</key>
+	<string>poinsettia</string>
+	<key>Pear</key>
+	<string>pear</string>
+	<key>Aster</key>
+	<string>aster</string>
+	<key>Jasmine</key>
+	<string>jasmine</string>
+	<key>Hydrangea</key>
+	<string>hydrangea</string>
+	<key>Lotus</key>
+	<string>lotus</string>
+	<key>Carnation</key>
+	<string>carnation</string>
+	<key>Wallflower</key>
+	<string>wallflower</string>
+	<key>Daisy</key>
+	<string>daisy</string>
+	<key>Peony</key>
+	<string>peony</string>
+	<key>Poppy</key>
+	<string>poppy</string>
+	<key>Oleander</key>
+	<string>oleander</string>
+	<key>Rose</key>
+	<string>rose</string>
+	<key>Sunflower</key>
+	<string>sunflower</string>
+</dict>
+</plist>

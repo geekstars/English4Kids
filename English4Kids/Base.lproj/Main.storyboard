@@ -1,25 +1,147 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LfH-Av-iWm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--English 4 Kids-->
+        <scene sceneID="DnT-63-E2Q">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController id="jtj-er-5js" customClass="MasterTableVC" customModule="English4Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" id="MuZ-x3-jDp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="5KV-mo-dsD">
+                                <rect key="frame" x="0.0" y="92" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5KV-mo-dsD" id="GCb-14-5Js">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="NjY-2f-aQq" kind="show" identifier="ShowDetail" id="af1-Ta-zEZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jtj-er-5js" id="RDY-iV-ZWl"/>
+                            <outlet property="delegate" destination="jtj-er-5js" id="dbw-al-8DP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="English 4 Kids" id="naC-y5-O9t"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11k-ar-eVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="768" y="316"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="v51-Sr-k8q">
+            <objects>
+                <viewController id="NjY-2f-aQq" customClass="DetailVC" customModule="English4Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M4b-YK-fKc"/>
+                        <viewControllerLayoutGuide type="bottom" id="zA6-CS-cwl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yok-kB-ES4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WVL-bc-cD3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zA6-CS-cwl" firstAttribute="top" secondItem="WVL-bc-cD3" secondAttribute="bottom" id="7st-ec-CEq"/>
+                            <constraint firstAttribute="trailing" secondItem="WVL-bc-cD3" secondAttribute="trailing" id="8CM-bN-xbZ"/>
+                            <constraint firstItem="WVL-bc-cD3" firstAttribute="top" secondItem="yok-kB-ES4" secondAttribute="top" id="uHm-gz-kel"/>
+                            <constraint firstItem="WVL-bc-cD3" firstAttribute="leading" secondItem="yok-kB-ES4" secondAttribute="leading" id="yEa-c4-X3i"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="WVL-bc-cD3" id="zHs-af-BSA"/>
+                        <segue destination="TKW-hz-eXD" kind="show" identifier="yourSegue" id="Kbm-bm-1yg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7VZ-dl-nlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160" y="316"/>
+        </scene>
+        <!--Show DetailVC-->
+        <scene sceneID="6tQ-4m-PDl">
+            <objects>
+                <viewController id="TKW-hz-eXD" customClass="ShowDetailVC" customModule="English4Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3kr-T2-iNE"/>
+                        <viewControllerLayoutGuide type="bottom" id="tq2-Ng-VNu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jEA-Tb-ZJL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRe-Nx-tVw">
+                                <rect key="frame" x="139" y="400" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R2P-oY-MiR" customClass="SpringImageView" customModule="English4Kids" customModuleProvider="target">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GQv-Qp-k3Y"/>
+                                    <constraint firstAttribute="width" constant="200" id="jf2-Ay-6nz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="wobble"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KRe-Nx-tVw" firstAttribute="top" secondItem="R2P-oY-MiR" secondAttribute="bottom" constant="16" id="8Ry-jp-I8a"/>
+                            <constraint firstItem="R2P-oY-MiR" firstAttribute="centerX" secondItem="jEA-Tb-ZJL" secondAttribute="centerX" id="ZGd-zh-aZd"/>
+                            <constraint firstItem="KRe-Nx-tVw" firstAttribute="centerX" secondItem="jEA-Tb-ZJL" secondAttribute="centerX" id="cxb-zR-a3v"/>
+                            <constraint firstItem="R2P-oY-MiR" firstAttribute="centerY" secondItem="jEA-Tb-ZJL" secondAttribute="centerY" id="gZq-II-MvL"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="img" destination="R2P-oY-MiR" id="Nsw-Bw-pYp"/>
+                        <outlet property="lbl_name" destination="KRe-Nx-tVw" id="yf8-oD-Pna"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGs-Pp-BQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1559" y="316"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MyG-Re-5jh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LfH-Av-iWm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F6j-EY-f5q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jtj-er-5js" kind="relationship" relationship="rootViewController" id="aln-7h-OSn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P3Z-Fu-M1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="316"/>
         </scene>
     </scenes>
 </document>

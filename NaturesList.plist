@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Hazelnut</key>
+	<string>hazelnut</string>
+	<key>Snowflake</key>
+	<string>snowflake</string>
+	<key>Coconut</key>
+	<string>coconut</string>
+	<key>Mushrooms</key>
+	<string>mushrooms</string>
+	<key>Tree</key>
+	<string>tree</string>
+	<key>Moon</key>
+	<string>moon</string>
+	<key>Cactus</key>
+	<string>cactus</string>
+	<key>Water</key>
+	<string>water</string>
+	<key>Sunny</key>
+	<string>sunny</string>
+	<key>Mountain</key>
+	<string>mountain</string>
+</dict>
+</plist>
